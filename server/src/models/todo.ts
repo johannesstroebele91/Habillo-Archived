@@ -1,6 +1,7 @@
-import { ITodo } from "./../types/todo";
+import { ITodo } from "../controllers/types/todo";
 import { model, Schema } from "mongoose";
 
+// Create a Todo Model
 const todoSchema: Schema = new Schema(
   {
     name: {
