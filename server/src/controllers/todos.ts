@@ -1,6 +1,6 @@
 import { Response, Request } from "express";
 import { ITodo } from "../types/todo";
-import Todo from "../../models/todo";
+import Todo from "../models/todo";
 
 /* Get, Add, Update and Delete Todos
     1) Get
