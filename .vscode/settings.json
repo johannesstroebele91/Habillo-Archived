@@ -2,5 +2,6 @@
     "cSpell.words": [
         "db",
         "habillo"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
