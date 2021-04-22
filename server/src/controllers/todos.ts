@@ -85,9 +85,7 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
     const deletedTodo: ITodo | null = await Todo.findByIdAndRemove(
       req.params.id
     );
-
     const allTodos: ITodo[] = await Todo.find();
-
     res.status(200).json({
       message: "Todo deleted",
       todo: deletedTodo,
@@ -99,4 +97,4 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 };
 
 // export the functions to be able to use them in other files
-export { getTodos, addTodo, updateTodo, deleteTodo }
+export { getTodos, addTodo, updateTodo, deleteTodo };

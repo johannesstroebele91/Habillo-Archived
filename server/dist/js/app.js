@@ -15,9 +15,11 @@ app.use(cors_1.default());
 app.use(routes_1.default);
 // use the mongoose package to connect to MongoDB
 // by appending to the URL the credentials held on the nodemon.json file
-const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
-const options = { userNewUrlParser: true, useUnifiedTopology: true };
-mongoose_1.default.set("useFindAndModify", false);
+// mongodb+srv://admin:<password>@db-habillo.vlxmf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+// mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority
+const uri = `mongodb+srv://christian:christian1234@db-habillo.vlxmf.mongodb.net/db-habillo?retryWrites=true&w=majority`;
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
+mongoose_1.default.set('useFindAndModify', false);
 mongoose_1.default
     .connect(uri, options)
     .then(() => app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`)))
