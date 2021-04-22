@@ -1,6 +1,7 @@
 // Fetch data from the API
 // axios enables to request data from the API
 import axios, { AxiosResponse } from "axios";
+import { ApiDataType, ITodo } from "./type";
 
 const baseUrl: string = "http://localhost:4000";
 

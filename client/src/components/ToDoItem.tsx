@@ -10,7 +10,7 @@ type Props = ToDoProps & {
 
 // append the functions updateTodo and deleteTodo
 // to handle appropriately the props received by the component
-const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
+const ToDoItem: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
   const checkTodo: string = todo.status ? `line-through` : ''
 
   // once the Todo object passed in,
@@ -40,4 +40,4 @@ const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
   )
 }
 
-export default Todo
+export default ToDoItem
