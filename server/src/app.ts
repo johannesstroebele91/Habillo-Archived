@@ -18,7 +18,7 @@ app.use(todoRoutes);
 
 // mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority
 
-const uri: string = `mongodb+srv://christian:christian1234@db-habillo.vlxmf.mongodb.net/db-habillo?retryWrites=true&w=majority`
+const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@db-habillo.vlxmf.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
 mongoose.set('useFindAndModify', false)
 
